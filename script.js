@@ -33,23 +33,31 @@ window.onload = typeWriter;
 // Music Play Button
 // ==========================
 
-const song = document.getElementById("song");
-const playBtn = document.getElementById("playBtn");
+musicBtn.onclick=()=>{
 
-playBtn.addEventListener("click", function () {
+if(playing){
 
-    if(song.paused){
-        song.play().then(()=>{
-            playBtn.innerHTML="⏸ Pause Song";
-        }).catch(err=>{
-            console.log(err);
-        });
-    }else{
-        song.pause();
-        playBtn.innerHTML="▶ Play Song";
-    }
+music.pause();
 
-});
+musicBtn.innerHTML="▶ Play Music";
+
+musicBtn.classList.remove("music-playing");
+
+playing=false;
+
+}else{
+
+music.play();
+
+musicBtn.innerHTML="⏸ Pause Music";
+
+musicBtn.classList.add("music-playing");
+
+playing=true;
+
+}
+
+};
 
 
 // ==========================
