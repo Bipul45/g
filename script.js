@@ -92,17 +92,6 @@ revealSection();
 
 
 // ==========================
-// Auto Pause Music
-// ==========================
-
-song.addEventListener("ended",()=>{
-
-playBtn.innerHTML="▶ Play Song";
-
-});
-
-
-// ==========================
 // Smooth Scroll
 // ==========================
 
